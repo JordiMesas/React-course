@@ -4,7 +4,9 @@
   "description": "An exercise for an introduction to React",
   "main": "index.js",
   "scripts": {
-    "start": "parcel ./src/index.html --open"
+    "start": "parcel ./src/index.html",
+    "lint": "eslint --fix src/**/*.{js,jsx}",
+    "format": "prettier --write \"*.{js,jsx,json,css}\""
   },
   "keywords": [
     "parcel",
@@ -13,10 +15,44 @@
   "author": "Alvaro Yuste (alvaroyuste.com)",
   "license": "MIT",
   "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "classnames": "^2.2.6",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
-  "devDependencies": {
-    "parcel-bundler": "^1.12.3"
-  }
+  "devDependencies": {    
+    "eslint": "^7.3.1",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "npm run lint"
+    ],
+    "src/**/*.{js,jsx,json,css,scss}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "semi": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlvYuste/react-course-wishlist.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AlvYuste/react-course-wishlist/issues"
+  },
+  "homepage": "https://github.com/AlvYuste/react-course-wishlist#readme"
 }
