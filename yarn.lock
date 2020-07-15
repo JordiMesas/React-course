@@ -6475,6 +6475,11 @@ which@^2.0.1:
   dependencies:
     isexe "^2.0.0"
 
+wi@^0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/wi/-/wi-0.0.0.tgz#e5b9dbcd744b89b107343f4c50479b02fab6ff45"
+  integrity sha1-5bnbzXRLibEHND9MUEebAvq2/0U=
+
 word-wrap@^1.2.3, word-wrap@~1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/word-wrap/-/word-wrap-1.2.3.tgz#610636f6b1f703891bd34771ccb17fb93b47079c"
